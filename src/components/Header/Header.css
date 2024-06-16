@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1em;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li {
+    display: inline;
+}
+
+.nav ul li.center-text {
+    display: flex;
+}
+
+.center-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
