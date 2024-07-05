@@ -3,6 +3,7 @@ import './App.css';
 import { Image } from 'primereact/image';
 import Header from '../components/Header/Header';
 import { useAuth0 } from '@auth0/auth0-react';
+import Paciente from '../components/Paciente/Paciente';
 
 function App() {
   const { isAuthenticated } = useAuth0();
@@ -11,7 +12,9 @@ function App() {
     <div className="App" >
       <Header nomeClinica='Carla Criscia Fisioterapia' />
       {isAuthenticated ?
-        <span>testando</span>
+        <main>
+          <Paciente />
+        </main>
         :
         <header className="App-header">
           <div className="card flex justify-content-center">
