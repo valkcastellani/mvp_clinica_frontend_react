@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { store } from './app/store'
+import { Provider } from 'react-redux';
 import './index.css';
 import App from './app/App';
 import reportWebVitals from './reportWebVitals';
@@ -22,7 +24,9 @@ root.render(
   >
     <React.StrictMode>
       <PrimeReactProvider>
-        <App />
+        <Provider store={store}>
+          <App />
+        </Provider>
       </PrimeReactProvider>
     </React.StrictMode>
   </Auth0Provider>

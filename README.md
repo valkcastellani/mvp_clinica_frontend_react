@@ -2,7 +2,7 @@
 
 Este projeto foi criado com o objetivo de oferecer uma solução para a gestão da agenda de uma amiga fisioterapeuta. Desenvolvido como parte do currículo do curso de Pós-Graduação em Engenharia de Software da PUC-Rio, seu desenvolvimento inicial ocorreu no módulo de Desenvolvimento Full Stack Básico. Atualmente, o projeto inclui implementações realizadas para o módulo de Arquitetura de Software.
 
-Este é o repositório do Frontend do MVP de Clínicas, que é dividido em quatro componentes principais: dois componentes internos e dois componentes externos.
+Este é o repositório do Frontend do MVP de Clínicas. O MVP é dividido em quatro componentes principais: dois componentes internos e dois componentes externos.
 
 ![Diagrama do MVP](https://github.com/valkcastellani/mvp_clinica_frontend_react/blob/master/img/esquema_mvp.png)
 
@@ -23,10 +23,11 @@ Este é o repositório do Frontend do MVP de Clínicas, que é dividido em quatr
 
 2.  **API de Pacientes:**
     
-    -   Desenvolvida com Flask.
+    -   Desenvolvida com a linguagem Python e o framework web Flask.
     -   Expõe endpoints para operações CRUD (Create, Read, Update, Delete) de pacientes.
     -   Não inclui a autenticação do token do Auth0 por fins didáticos.
     -   Nas consultas, a API também realiza chamadas ao VIACEP para retornar dados de endereço.
+    -   A documentação desta API é fornecida seguindo o padrão OpenAPI através do Swagger.
 
 ## Componentes Externos
 

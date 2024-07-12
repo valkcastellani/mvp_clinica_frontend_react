@@ -1,12 +1,20 @@
 import axios from 'axios';
 
-const baseURL = "http://127.0.0.1:5000";
+const baseURL = "http://localhost:5000";
+
+const httpJSON = axios.create({
+    baseURL: baseURL,
+    withCredentials: false,
+    headers: {
+        Accept: 'application/json',
+    }
+});
 
 const http = axios.create({
     baseURL: baseURL,
     withCredentials: false,
     headers: {
-        Accept: 'application/json',
+        Accept: 'multipart/form-data',
     }
 });
 

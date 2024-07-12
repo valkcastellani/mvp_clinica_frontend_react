@@ -5,12 +5,12 @@
 .floating-button {
     color: white;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    inset-block-end: 20px;
+    inset-inline-end: 20px;
     z-index: 1000;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    inline-size: 60px;
+    block-size: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
