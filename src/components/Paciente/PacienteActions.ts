@@ -75,7 +75,7 @@ export const pacienteTypesChangeDataInsercaoAction = (data: any) => ({
     payload: data
 })
 
-export const pacienteTypesChangeDataEnderecoAction = (data: any) => ({
+export const pacienteTypesChangeEnderecoAction = (data: any) => ({
     type: PacienteTypes.PACIENTE_CHANGE_ENDERECO,
     payload: data
 })

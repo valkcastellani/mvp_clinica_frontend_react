@@ -1,7 +1,6 @@
 import moment from "moment";
 import { PacienteState, PacienteTypes } from "./PacienteTypes";
 import { PayloadAction } from "@reduxjs/toolkit";
-import { removerFormatacao } from "../../util/utils";
 
 export const initialPacienteState: PacienteState = {
     cpf: "",
@@ -24,7 +23,7 @@ export const initialPacienteState: PacienteState = {
 export const PacienteReducers = (state: PacienteState = initialPacienteState, action: PayloadAction<string[]>) => {
     switch (action.type) {
         case PacienteTypes.PACIENTE_GET_DATA:
-            return { ...state, ...action.payload };
+            return { ...action.payload };
 
         case PacienteTypes.PACIENTE_CHANGE_CPF:
             return { ...state, cpf: action.payload };

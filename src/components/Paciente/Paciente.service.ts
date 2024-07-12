@@ -4,7 +4,10 @@ import { PacienteState, PacienteTypes } from "./PacienteTypes";
 import { AnyAction, ThunkAction } from "@reduxjs/toolkit";
 import { RootState } from "../../app/store";
 import { initialPacienteState } from "./PacienteReducers";
-import { pacienteTypesChangeBairroAction, pacienteTypesChangeCidadeAction, pacienteTypesChangeEstadoAction, pacienteTypesChangeLogradouroAction } from "./PacienteActions";
+import {
+    pacienteTypesChangeBairroAction, pacienteTypesChangeCidadeAction,
+    pacienteTypesChangeEstadoAction, pacienteTypesChangeLogradouroAction
+} from "./PacienteActions";
 
 const url = 'http://127.0.0.1:5000/paciente';
 
@@ -61,7 +64,6 @@ export const getPaciente = (cpf: string): ThunkAction<void, RootState, unknown, 
         })
             .then((response) => response.json())
             .then((data) => {
-                console.log(data)
                 pacienteState.cpf = data.cpf;
                 pacienteState.nome = data.nome;
                 pacienteState.data_nascimento = data.data_nascimento;
@@ -209,7 +211,7 @@ export const getViaCep = (cep: number): ThunkAction<void, RootState, unknown, An
             .then((data) => {
                 dispatch(pacienteTypesChangeLogradouroAction(data.logradouro));
                 dispatch(pacienteTypesChangeBairroAction(data.bairro));
-                dispatch(pacienteTypesChangeCidadeAction(data.locallidade));
+                dispatch(pacienteTypesChangeCidadeAction(data.localidade));
                 dispatch(pacienteTypesChangeEstadoAction(data.uf));
             });
     }
