@@ -24,7 +24,12 @@ import 'primeflex/primeflex.css';
 import './Paciente.css';
 import Swal from 'sweetalert2';
 import { useDispatch, useSelector } from 'react-redux';
-import { pacienteTypesChangeBairroAction, pacienteTypesChangeCepAction, pacienteTypesChangeCidadeAction, pacienteTypesChangeComplementoAction, pacienteTypesChangeCpfAction, pacienteTypesChangeDataNascimentoAction, pacienteTypesChangeEmailAction, pacienteTypesChangeEstadoAction, pacienteTypesChangeLogradouroAction, pacienteTypesChangeNomeAction, pacienteTypesChangeNumeroAction, pacienteTypesChangeSexoAction, pacienteTypesChangeTelefoneAction, pacienteTypesGetDataAction } from './PacienteActions';
+import {
+    pacienteTypesChangeCepAction, pacienteTypesChangeComplementoAction, pacienteTypesChangeCpfAction,
+    pacienteTypesChangeDataNascimentoAction, pacienteTypesChangeEmailAction, pacienteTypesChangeNomeAction,
+    pacienteTypesChangeNumeroAction, pacienteTypesChangeSexoAction, pacienteTypesChangeTelefoneAction,
+    pacienteTypesGetDataAction
+} from './PacienteActions';
 import { AppDispatch } from '../../app/store';
 import { initialPacienteState } from './PacienteReducers';
 

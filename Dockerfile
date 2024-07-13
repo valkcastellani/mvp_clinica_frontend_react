@@ -1,22 +1,14 @@
-# Construir a aplicação
-FROM node:20-alpine as build
+FROM node:20-alpine
 
 ENV HOME=/home/app
 WORKDIR $HOME
 
-COPY package.json ./
+COPY package*.json ./
+
 RUN npm install --only=prod --silent
 
-COPY . /home/app
-RUN npm run build
+COPY . .
 
+EXPOSE 3000
 
-# Servir a aplicação usando Nginx
-FROM nginx:1.16.0-alpine
-
-COPY --from=build /home/app/ /usr/share/nginx/html/
-RUN rm /etc/nginx/conf.d/default.conf
-COPY nginx/nginx.conf /etc/nginx/conf.d
-
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["npm", "start"]
